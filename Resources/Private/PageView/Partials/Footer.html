@@ -1,14 +1,20 @@
 <footer class="bg-dark-subtle">
     <div class="container py-5">
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-3 g-md-4 g-lg-5">
             <div class="col">
-                Footer 1
+                <f:if condition="{footerMenu}">
+                <ul class="nav flex-column">
+                <f:for each="{footerMenu}" as="item">
+                <li class="nav-item""><a class="nav-link" href="{item.link}"><i class="bi-chevron-right"></i> {item.title}</a></li>
+                </f:for>
+                </ul>
+                </f:if>
             </div>
             <div class="col">
-                Footer 2
+                <p>Suspendisse potenti. Fusce nec mauris id mi sodales vestibulum. Integer commodo enim sed turpis luctus facilisis. Nam at leo dolor. Praesent lacinia nibh tellus, eget fringilla magna porttitor sit amet. Donec facilisis vehicula ante a convallis. Integer consectetur, metus ac gravida aliquet, mauris turpis iaculis quam, nec sodales lectus leo eu arcu.</p>
             </div>
             <div class="col">
-                Footer 3
+                <p>Suspendisse potenti. Fusce nec mauris id mi sodales vestibulum. Integer commodo enim sed turpis luctus facilisis. Nam at leo dolor. Praesent lacinia nibh tellus, eget fringilla magna porttitor sit amet. Donec facilisis vehicula ante a convallis. Integer consectetur, metus ac gravida aliquet, mauris turpis iaculis quam, nec sodales lectus leo eu arcu.</p>
             </div>
         </div>
     </div>
