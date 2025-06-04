@@ -61,6 +61,7 @@ page {
 
     includeJSFooter{
         bootstrap = EXT:business_theme/Resources/Public/Libs/bootstrap/dist/js/bootstrap.bundle.min.js
+        navbar =  EXT:business_theme/Resources/Public/Js/navbar.js
     }
 
     headerData{
@@ -81,7 +82,7 @@ page {
 
             20 = menu
             20 {
-                levels = 2
+                levels = 4
                 as = mainMenu
                 expandAll = 1
                 includeSpacer = 1
