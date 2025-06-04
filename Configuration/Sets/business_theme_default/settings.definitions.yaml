@@ -4,6 +4,9 @@ categories:
   business_theme.theme:
     label: 'Theme'
     parent: business_theme
+  business_theme.language:
+    label: 'Language'
+    parent: business_theme.theme
   business_theme.contrast:
     label: 'Contrast'
     parent: business_theme.theme
@@ -36,6 +39,17 @@ categories:
     parent: business_theme
 
 settings:
+
+  language_menu.position:
+    label: 'Language Menu'
+    description: 'Status and position of the language menu'
+    category: business_theme.language
+    type: string
+    enum:
+      'none': 'Do not show at all'
+      'navbar': 'Main Navbar'
+      'footer': 'Footer'
+    default: 'none'
 
   # Menus
   navbar.position:
@@ -101,14 +115,6 @@ settings:
     default: 'EXT:business_theme/Resources/Public/Images/kohlercode-logo-w.svg'
 
   # Theme
-
-  theme.enable.modetoggle:
-    label: 'Enable Mode Toggle'
-    description: 'If selected, the user can choose between "light" and "dark." Note: Only works if "auto" is selected under "Theme Contrast"!'
-    category: business_theme.contrast
-    type: bool
-    default: true
-
   theme.contrast:
     label: 'Theme Contrast'
     description: 'Choose "light" for a light theme, "dark" for a dark one, and "auto" for automatic detection based on the users system settings.'
@@ -119,6 +125,23 @@ settings:
       'dark': 'dark'
       'auto': 'auto'
     default: 'light'
+
+  theme.enable.contrast_toggle:
+    label: 'Enable Contrast Toggle'
+    description: 'If selected, the user can choose between "light" and "dark." Note: Only works if "auto" is selected under "Theme Contrast"!'
+    category: business_theme.contrast
+    type: bool
+    default: true
+
+  theme.contrast_toggle_position:
+    label: 'Contrast Toggle Position'
+    description: 'Position of the contrast toggle'
+    category: business_theme.contrast
+    type: string
+    enum:
+      'navbar': 'Main Navbar'
+      'footer': 'Footer'
+    default: 'navbar'
 
   # Colors
 
