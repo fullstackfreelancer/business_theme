@@ -61,7 +61,6 @@ page {
 
     includeJSFooter{
         bootstrap = EXT:business_theme/Resources/Public/Libs/bootstrap/dist/js/bootstrap.bundle.min.js
-        navbar =  EXT:business_theme/Resources/Public/Js/navbar.js
     }
 
     headerData{
@@ -108,6 +107,12 @@ page {
                         references.fieldName = media
                     }
                 }
+            }
+
+            40 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            40 {
+              languages = auto
+              as = languageMenu
             }
 
         }
