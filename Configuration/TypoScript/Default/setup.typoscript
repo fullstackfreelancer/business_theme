@@ -78,8 +78,37 @@ page {
         }
         dataProcessing {
             10 = page-content
+
             20 = menu
-            20.as = mainMenu
+            20 {
+                levels = 2
+                as = mainMenu
+                expandAll = 1
+                includeSpacer = 1
+                titleField = nav_title // title
+                dataProcessing {
+                    10 = files
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+
+            30 = menu
+            30 {
+                levels = 1
+                as = footerMenu
+                expandAll = 1
+                includeSpacer = 1
+                titleField = nav_title // title
+                dataProcessing {
+                    10 = files
+                    10 {
+                        references.fieldName = media
+                    }
+                }
+            }
+
         }
     }
 }
