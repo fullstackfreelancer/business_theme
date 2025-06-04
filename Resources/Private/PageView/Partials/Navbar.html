@@ -7,9 +7,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <f:for each="{mainMenu}" as="item">
-                <li class="nav-item">
-                    <a class="nav-link" href="{item.link}">{item.title}</a>
-                </li>
+                <f:if condition="{item.hasSubpages}">
+                    <f:then>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{item.link}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{item.title}</a>
+                            <ul class="dropdown-menu">
+                                <f:for each="{item.children}" as="item">
+                                <li><a class="dropdown-item" href="{item.link}">{item.title}</a></li>
+                                </f:for>
+                            </ul>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{item.link}">{item.title}</a>
+                        </li>
+                    </f:else>
+                </f:if>
                 </f:for>
             </ul>
 
