@@ -1,0 +1,27 @@
+plugin.tx_wsscss.variables {
+    # Color variables
+    primary = {$theme.color.primary}
+    secondary = {$theme.color.secondary}
+    success = {$theme.color.success}
+    info = {$theme.color.info}
+    warning = {$theme.color.warning}
+    danger = {$theme.color.danger}
+    light = {$theme.color.light}
+    dark = {$theme.color.dark}
+
+    # Typography variables
+    font-family-base = {$theme.typography.font_base}
+    font-size-base = {$theme.typography.font_size_base}
+    small-font-size = {$theme.typography.small_font_size}
+
+    headings-margin-bottom = {$theme.typography.headings_margin_bottom}
+    headings-font-family = {$theme.typography.headings_font_family}
+
+    # Optional heading sizes
+    h1-font-size = {$theme.typography.h1_size}
+    h2-font-size = {$theme.typography.h2_size}
+    h3-font-size = {$theme.typography.h3_size}
+    h4-font-size = {$theme.typography.h4_size}
+    h5-font-size = {$theme.typography.h5_size}
+    h6-font-size = {$theme.typography.h6_size}
+}

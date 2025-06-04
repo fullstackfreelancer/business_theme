@@ -1,0 +1,3 @@
+@import 'EXT:business_theme/Configuration/TypoScript/Default/setup.typoscript'
+@import 'EXT:business_theme/Configuration/TypoScript/Default/scss.typoscript'
+@import 'EXT:business_theme/Configuration/TypoScript/Default/container.typoscript'

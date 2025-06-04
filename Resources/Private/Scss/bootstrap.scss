@@ -1,0 +1,55 @@
+// Functions first
+@import "../../Public/Libs/bootstrap/scss/functions";
+
+$navbar-padding-y: 1.4rem;
+$navbar-nav-link-padding-x: .6rem;
+
+// Required Bootstrap imports
+@import "../../Public/Libs/bootstrap/scss/variables";
+@import "../../Public/Libs/bootstrap/scss/variables-dark";
+@import "../../Public/Libs/bootstrap/scss/maps";
+@import "../../Public/Libs/bootstrap/scss/mixins";
+@import "../../Public/Libs/bootstrap/scss/root";
+
+// Optional components
+@import "../../Public/Libs/bootstrap/scss/utilities";
+
+@import "../../Public/Libs/bootstrap/scss/reboot";
+@import "../../Public/Libs/bootstrap/scss/type";
+@import "../../Public/Libs/bootstrap/scss/images";
+@import "../../Public/Libs/bootstrap/scss/containers";
+@import "../../Public/Libs/bootstrap/scss/grid";
+@import "../../Public/Libs/bootstrap/scss/tables";
+@import "../../Public/Libs/bootstrap/scss/forms";
+@import "../../Public/Libs/bootstrap/scss/buttons";
+@import "../../Public/Libs/bootstrap/scss/transitions";
+@import "../../Public/Libs/bootstrap/scss/dropdown";
+@import "../../Public/Libs/bootstrap/scss/button-group";
+@import "../../Public/Libs/bootstrap/scss/nav";
+@import "../../Public/Libs/bootstrap/scss/navbar";
+@import "../../Public/Libs/bootstrap/scss/card";
+@import "../../Public/Libs/bootstrap/scss/accordion";
+@import "../../Public/Libs/bootstrap/scss/breadcrumb";
+@import "../../Public/Libs/bootstrap/scss/pagination";
+@import "../../Public/Libs/bootstrap/scss/badge";
+@import "../../Public/Libs/bootstrap/scss/alert";
+@import "../../Public/Libs/bootstrap/scss/progress";
+@import "../../Public/Libs/bootstrap/scss/list-group";
+@import "../../Public/Libs/bootstrap/scss/close";
+@import "../../Public/Libs/bootstrap/scss/toasts";
+@import "../../Public/Libs/bootstrap/scss/modal";
+@import "../../Public/Libs/bootstrap/scss/tooltip";
+@import "../../Public/Libs/bootstrap/scss/popover";
+@import "../../Public/Libs/bootstrap/scss/carousel";
+@import "../../Public/Libs/bootstrap/scss/spinners";
+@import "../../Public/Libs/bootstrap/scss/offcanvas";
+@import "../../Public/Libs/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../Public/Libs/bootstrap/scss/helpers";
+
+// Utilities
+@import "../../Public/Libs/bootstrap/scss/utilities/api";
+
+// Custom
+@import "hamburger";

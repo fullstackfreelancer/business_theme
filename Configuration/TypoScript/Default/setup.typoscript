@@ -1,0 +1,100 @@
+config.contentObjectExceptionHandler = 0
+
+# Basic rendering of list-type plugins. Normally defined in fluid_styled_content.
+tt_content.list = FLUIDTEMPLATE
+tt_content.list {
+  template = TEXT
+  template.value = <f:cObject typoscriptObjectPath="tt_content.list.20.{data.list_type}" table="tt_content" data="{data}"/>
+}
+
+lib.dynamicContent = COA
+lib.dynamicContent {
+   10 = LOAD_REGISTER
+   10.colPos.cObject = TEXT
+   10.colPos.cObject {
+      field = colPos
+      ifEmpty.cObject = TEXT
+      ifEmpty.cObject {
+         value.current = 1
+         ifEmpty = 0
+      }
+   }
+   20 = CONTENT
+   20 {
+      table = tt_content
+      select {
+         orderBy = sorting
+         where = {#colPos}={register:colPos}
+         where.insertData = 1
+      }
+   }
+   90 = RESTORE_REGISTER
+}
+
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+    templateRootPaths {
+        0 = EXT:business_theme/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        0 = EXT:business_theme/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        0 = EXT:business_theme/Resources/Private/Layouts/ContentElements/
+    }
+}
+
+page = PAGE
+page {
+
+    config.htmlTag.attributes.data-bs-theme = {$theme.contrast}
+
+    meta{
+        viewport = width=device-width, initial-scale=1
+    }
+
+    includeCSS{
+        master = EXT:business_theme/Resources/Private/Scss/bootstrap.scss
+        master.outputfile = EXT:business_theme/Resources/Public/Css/bootstrap.css
+        icons = https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css
+    }
+
+    includeJSFooter{
+        bootstrap = EXT:business_theme/Resources/Public/Libs/bootstrap/dist/js/bootstrap.bundle.min.js
+    }
+
+    headerData{
+
+    }
+
+    10 = PAGEVIEW
+    10 {
+        paths {
+            100 = EXT:business_theme/Resources/Private/PageView/
+        }
+        variables {
+            parentPageTitle = TEXT
+            parentPageTitle.data = levelfield:-1:title
+        }
+        dataProcessing {
+            10 = page-content
+            20 = menu
+            20.as = mainMenu
+        }
+    }
+}
+
+[{$theme.typography.webfont.enable} == true]
+page.headerData{
+100 = TEXT
+100.value(
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{$theme.typography.webfont.url}" rel="stylesheet">
+)
+}
+[global]
+
+["{$theme.contrast}" === "auto"]
+page.includeJS.colorswitch = EXT:business_theme/Resources/Public/Js/colorswitch.js
+[global]

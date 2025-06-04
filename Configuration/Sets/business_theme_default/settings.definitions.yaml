@@ -1,0 +1,333 @@
+categories:
+  business_theme:
+    label: 'Business Theme'
+  business_theme.theme:
+    label: 'Theme'
+    parent: business_theme
+  business_theme.contrast:
+    label: 'Contrast'
+    parent: business_theme.theme
+  business_theme.colors:
+    label: 'Colors'
+    parent: business_theme.theme
+  business_theme.typography:
+    label: 'Typography'
+    parent: business_theme.theme
+  business_theme.webfont:
+    label: 'Web Fonts'
+    parent: business_theme.typography
+  business_theme.headings:
+    label: 'Headings'
+    parent: business_theme.typography
+  business_theme.logo:
+    label: 'Logo'
+    parent: business_theme.theme
+  business_theme.navbar:
+    label: 'Navbar'
+    parent: business_theme.theme
+  business_theme.templates:
+    label: 'Templates'
+    parent: business_theme
+  business_theme.templates.page:
+    label: 'Pages'
+    parent: business_theme.templates
+  business_theme.webmanifest:
+    label: 'Webmanifest'
+    parent: business_theme
+
+settings:
+
+  # Menus
+  navbar.position:
+    label: 'Navbar Position'
+    description: 'Leave blank to use website title from template instead'
+    category: business_theme.navbar
+    type: string
+    enum:
+      'default': 'default'
+      'fixed': 'fixed to top'
+    default: 'default'
+
+  navbar.theme:
+    label: 'Navbar Theme'
+    description: 'Fluid or fixed size'
+    category: business_theme.navbar
+    type: string
+    enum:
+      '': 'None'
+      'light': 'Light'
+      'dark': 'Dark'
+    default: ''
+
+  navbar.container_class:
+    label: 'Navbar Container'
+    description: 'Fluid or fixed size'
+    category: business_theme.navbar
+    type: string
+    enum:
+      'container-fluid': 'Fluid width'
+      'container': 'Fixed width'
+    default: 'container'
+
+  navbar.background_color:
+    label: 'Navbar Background Color'
+    description: 'Background color scheme'
+    category: business_theme.navbar
+    type: string
+    enum:
+      'bg-primary': 'Primary'
+      'bg-secondary': 'Secondary'
+      'bg-danger': 'Danger'
+      'bg-warning': 'Warning'
+      'bg-info': 'Info'
+      'bg-dark': 'Dark'
+      'bg-light': 'Light'
+      'bg-body-tertiary': 'Body Tertiary'
+    default: 'bg-dark'
+
+  # Logo
+  page.logo.file:
+    label: 'Logo'
+    description: 'Leave blank to use website title from template instead'
+    category: business_theme.logo
+    type: string
+    default: 'EXT:business_theme/Resources/Public/Images/kohlercode-logo-b.svg'
+
+  page.logo.fileInverted:
+    label: 'Logo'
+    description: 'Leave blank to use website title from template instead'
+    category: business_theme.logo
+    type: string
+    default: 'EXT:business_theme/Resources/Public/Images/kohlercode-logo-w.svg'
+
+  # Theme
+
+  theme.enable.modetoggle:
+    label: 'Enable Mode Toggle'
+    description: 'If selected, the user can choose between "light" and "dark." Note: Only works if "auto" is selected under "Theme Contrast"!'
+    category: business_theme.contrast
+    type: bool
+    default: true
+
+  theme.contrast:
+    label: 'Theme Contrast'
+    description: 'Choose "light" for a light theme, "dark" for a dark one, and "auto" for automatic detection based on the users system settings.'
+    category: business_theme.contrast
+    type: string
+    enum:
+      'light': 'light'
+      'dark': 'dark'
+      'auto': 'auto'
+    default: 'light'
+
+  # Colors
+
+  theme.color.primary:
+    label: 'Primary'
+    description: 'The primary theme color, used for main UI highlights and brand accents.'
+    category: business_theme.colors
+    type: color
+    default: '#0d6efd'
+
+  theme.color.secondary:
+    label: 'Secondary'
+    description: 'The secondary color, used for less prominent UI elements.'
+    category: business_theme.colors
+    type: color
+    default: '#6c757d'
+
+  theme.color.success:
+    label: 'Success'
+    description: 'The success theme color'
+    category: business_theme.colors
+    type: color
+    default: '#198754'
+
+  theme.color.info:
+    label: 'Info'
+    description: 'The info color, used for neutral or informational messages.'
+    category: business_theme.colors
+    type: color
+    default: '#0dcaf0'
+
+  theme.color.warning:
+    label: 'Warning'
+    description: 'The warning color, used to indicate caution.'
+    category: business_theme.colors
+    type: color
+    default: '#ffc107'
+
+  theme.color.danger:
+    label: 'Danger'
+    description: 'The danger color, used for errors and destructive actions.'
+    category: business_theme.colors
+    type: color
+    default: '#dc3545'
+
+  theme.color.light:
+    label: 'Light'
+    description: 'The light color, used for backgrounds and subtle accents.'
+    category: business_theme.colors
+    type: color
+    default: '#f8f9fa'
+
+  theme.color.dark:
+    label: 'Dark'
+    description: 'The dark color, used for dark UI sections and emphasis.'
+    category: business_theme.colors
+    type: color
+    default: '#212529'
+
+  # Typography Web Fonts
+
+  theme.typography.webfont.enable:
+    label: 'Enable Google Fonts'
+    description: 'If disabled, there will be no Google Font rendering in the frontend.'
+    category: business_theme.webfont
+    type: bool
+    default: true
+
+  theme.typography.webfont.url:
+    label: 'Font URL'
+    description: 'If disabled, there will be no Google Font rendering in the frontend.'
+    category: business_theme.webfont
+    type: string
+    default: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@600&display=swap'
+
+  # Typography General
+
+  theme.typography.font_size_base:
+    label: 'Base Font Size'
+    description: 'The base font size for body text.'
+    category: business_theme.typography
+    type: string
+    default: '1rem' # equals 16px by default
+
+  theme.typography.font_base:
+    label: 'Base Font Family'
+    description: 'The primary font family for body text.'
+    category: business_theme.typography
+    type: string
+    default: '"Helvetica Neue", Helvetica, Arial, sans-serif'
+
+  theme.typography.small_font_size:
+    label: 'Small Font Size'
+    description: 'The base font size for body text.'
+    category: business_theme.typography
+    type: string
+    default: '0.75rem'
+
+  # Typography Headings
+
+  theme.typography.headings_margin_bottom:
+    label: 'Headings Margin Bottom'
+    description: 'Font family used for all headings (h1–h6).'
+    category: business_theme.headings
+    type: string
+    default: '1rem'
+
+  theme.typography.headings_font_family:
+    label: 'Headings Font Family'
+    description: 'Font family used for all headings (h1–h6).'
+    category: business_theme.headings
+    type: string
+    default: '"Helvetica Neue", Helvetica, Arial, sans-serif'
+
+  # Typography Heading Sizes
+
+  theme.typography.h1_size:
+    label: 'H1 Font Size'
+    description: 'Font size for the H1 heading.'
+    category: business_theme.headings
+    type: text
+    default: '2.5rem'
+
+  theme.typography.h2_size:
+    label: 'H2 Font Size'
+    description: 'Font size for the H2 heading.'
+    category: business_theme.headings
+    type: text
+    default: '2rem'
+
+  theme.typography.h3_size:
+    label: 'H3 Font Size'
+    description: 'Font size for the H3 heading.'
+    category: business_theme.headings
+    type: text
+    default: '1.75rem'
+
+  theme.typography.h4_size:
+    label: 'H4 Font Size'
+    description: 'Font size for the H4 heading.'
+    category: business_theme.headings
+    type: text
+    default: '1.5rem'
+
+  theme.typography.h5_size:
+    label: 'H5 Font Size'
+    description: 'Font size for the H5 heading.'
+    category: business_theme.headings
+    type: text
+    default: '1.25rem'
+
+  theme.typography.h6_size:
+    label: 'H6 Font Size'
+    description: 'Font size for the H6 heading.'
+    category: business_theme.headings
+    type: text
+    default: '1rem'
+
+  # Manifest
+  manifest.appName:
+    label: 'Manifest App Name'
+    description: 'The page type number for the manifest'
+    category: business_theme.webmanifest
+    type: string
+    default: 'Business Theme'
+
+  manifest.startUrl:
+    label: 'Start URL'
+    description: 'The URL that should be opened when a user launches your web application'
+    category: business_theme.webmanifest
+    type: string
+    default: '/'
+
+  manifest.typeNum:
+    label: 'Manifest typeNum'
+    description: 'The page type number for the manifest'
+    category: business_theme.webmanifest
+    type: string
+    default: '13051978'
+
+  manifest.icon512:
+    label: 'Manifest Icon 512px'
+    description: 'The page type number for the manifest'
+    category: business_theme.webmanifest
+    type: string
+    default: 'typo3conf/ext/business_theme/Resources/Public/Icons/512x512.png'
+
+  manifest.icon192:
+    label: 'Manifest Icon 192px'
+    description: 'The page type number for the manifest'
+    category: business_theme.webmanifest
+    type: string
+    default: 'typo3conf/ext/business_theme/Resources/Public/Icons/192x192.png'
+
+  manifest.display:
+    label: 'Display Mode'
+    description: 'The display mode determines how much of the browser UI is shown to the user when the app is launched within the context of an operating system.'
+    category: business_theme.webmanifest
+    type: string
+    enum:
+      'fullscreen': 'fullscreen'
+      'standalone': 'standalone'
+      'minimal-ui': 'minimal-ui'
+      'browser': 'browser'
+    default: 'standalone'
+
+  # Template Page
+  page.pageview.path:
+    label: 'Layout Root Path'
+    category: business_theme.templates.page
+    type: string
+    default: 'EXT:business_theme/Resources/Private/PageView/'

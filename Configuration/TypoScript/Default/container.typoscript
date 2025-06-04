@@ -1,0 +1,36 @@
+tt_content {
+
+    grid_container < lib.contentElement
+    grid_container {
+        templateName = Container
+        templateRootPaths {
+            10 = EXT:business_theme/Resources/Private/Templates/Container/
+        }
+        dataProcessing {
+            100 = B13\Container\DataProcessing\ContainerProcessor
+        }
+    }
+
+    grid_twocolumns < lib.contentElement
+    grid_twocolumns {
+        templateName = TwoColumns
+        templateRootPaths {
+            10 = EXT:business_theme/Resources/Private/Templates/Container/
+        }
+        dataProcessing {
+            100 = B13\Container\DataProcessing\ContainerProcessor
+        }
+    }
+
+    grid_threecolumns < lib.contentElement
+    grid_threecolumns {
+        templateName = ThreeColumns
+        templateRootPaths {
+            10 = EXT:business_theme/Resources/Private/Templates/Container/
+        }
+        dataProcessing {
+            100 = B13\Container\DataProcessing\ContainerProcessor
+        }
+    }
+
+}

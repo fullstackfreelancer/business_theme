@@ -1,0 +1,17 @@
+<f:layout name="Default" />
+
+<f:section name="Jumbotron">
+    <div class="jumbotron">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+    </div>
+</f:section>
+
+<f:section name="Main">
+    <main class="py-5">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+        <div class="container">
+            <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+        </div>
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '3'}" />
+    </main>
+</f:section>

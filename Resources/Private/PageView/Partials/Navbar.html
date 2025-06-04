@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg {settings.navbar.background_color}" data-bs-theme="{settings.navbar.theme}">
+    <div class="{settings.navbar.container_class}">
+        <f:link.page pageUid="{site.rootPageId}" class="navbar-brand">HOME</f:link.page>
+        <button class="navbar-toggler hamburger-toggle collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <f:for each="{mainMenu}" as="item">
+                <li class="nav-item">
+                    <a class="nav-link" href="{item.link}">{item.title}</a>
+                </li>
+                </f:for>
+            </ul>
+
+            <f:if condition="{settings.theme.contrast} == 'auto' && {settings.theme.enable.modetoggle}">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="bi-sun"></i> Light</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="bi-circle-half"></i> Dark</a></li>
+                    </ul>
+                </li>
+            </ul>
+            </f:if>
+
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,59 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Minimal configuration for the editor
+editor:
+  config:
+    contentsCss: "EXT:business_theme/Resources/Public/Css/rte_default.css"
+    format_tags: "p;h1;h2;h3;h4;h5;pre"
+    justifyClasses:
+        - text-start
+        - text-center
+        - text-end
+        - text-justify
+    stylesSet:
+        - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }
+
+        - { name: "Button Default", element: "a", attributes: { 'class': 'btn btn-default' } }
+        - { name: "Button Primary", element: "a", attributes: { 'class': 'btn btn-primary' } }
+        - { name: "Button Secondary", element: "a", attributes: { 'class': 'btn btn-secondary' } }
+        - { name: "Button Tertiary", element: "a", attributes: { 'class': 'btn btn-tertiary' } }
+        - { name: "Button Quaternary", element: "a", attributes: { 'class': 'btn btn-quaternary' } }
+        - { name: "Button Success", element: "a", attributes: { 'class': 'btn btn-success' } }
+        - { name: "Button Info", element: "a", attributes: { 'class': 'btn btn-info' } }
+        - { name: "Button Warning", element: "a", attributes: { 'class': 'btn btn-warning' } }
+        - { name: "Button Danger", element: "a", attributes: { 'class': 'btn btn-danger' } }
+
+        - { name: "Button Outline Default", element: "a", attributes: { 'class': 'btn btn-outline-default' } }
+        - { name: "Button Outline Primary", element: "a", attributes: { 'class': 'btn btn-outline-primary' } }
+        - { name: "Button Outline Secondary", element: "a", attributes: { 'class': 'btn btn-outline-secondary' } }
+        - { name: "Button Outline Tertiary", element: "a", attributes: { 'class': 'btn btn-outline-tertiary' } }
+        - { name: "Button Outline Quaternary", element: "a", attributes: { 'class': 'btn btn-outline-quaternary' } }
+        - { name: "Button Outline Success", element: "a", attributes: { 'class': 'btn btn-outline-success' } }
+        - { name: "Button Outline Info", element: "a", attributes: { 'class': 'btn btn-outline-info' } }
+        - { name: "Button Outline Warning", element: "a", attributes: { 'class': 'btn btn-outline-warning' } }
+        - { name: "Button Outline Danger", element: "a", attributes: { 'class': 'btn btn-outline-danger' } }
+    toolbar:
+      items:
+        - style
+        - heading
+        - bold
+        - italic
+        - alignment
+        - underline
+        - strikethrough
+        - subscript
+        - superscript
+        - bulletedList
+        - numberedList
+        - blockquote
+        - horizontalLine
+        - '|'
+        - link
+        - clipboard
+        - undo
+        - redo
+        - sourceEditing
