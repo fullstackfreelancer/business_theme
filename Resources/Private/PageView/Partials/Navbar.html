@@ -20,10 +20,29 @@
                 </f:for>
             </ul>
 
-            <f:if condition="{settings.theme.contrast} == 'auto' && {settings.theme.enable.modetoggle}">
+            <f:if condition="{settings.language_menu.position} == 'navbar'">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Choose Language">
+                        <i class="bi-globe"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <f:for each="{languageMenu}" as="item">
+                        <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                            <a class="dropdown-item" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">{item.navigationTitle}</a>
+                        </li>
+                        </f:for>
+                    </ul>
+                </li>
+            </ul>
+            </f:if>
+
+            <f:if condition="{settings.theme.contrast} == 'auto' && {settings.theme.enable.contrast_toggle} && {settings.theme.contrast_toggle_position} == 'navbar'">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Toggle Contrast">
+                        <i class="bi-circle-half"></i>
+                    </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="#" data-bs-theme-value="light"><i class="bi-sun"></i> Light</a></li>
                         <li><a class="dropdown-item" href="#" data-bs-theme-value="dark"><i class="bi-circle-half"></i> Dark</a></li>
