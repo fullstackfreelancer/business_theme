@@ -23,7 +23,8 @@ $EM_CONF['business_theme'] = [
             'fluid_styled_content' => '*',
         ],
         'suggests' => [
-
+            'showcase' => '3.1.1-3.1.99',
+            'ce_timeline' => '5.0.1-5.0.99',
         ],
     ],
 ];
