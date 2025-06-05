@@ -53,5 +53,23 @@ $enable-negative-margins: true;
 @import "../../Public/Libs/bootstrap/scss/utilities/api";
 
 // Custom
+[data-bs-theme="dark"]{
+    .logo-dark {
+      display: block;
+    }
+    .logo-light {
+      display: none;
+    }
+}
+
+[data-bs-theme="light"]{
+    .logo-dark {
+      display: none;
+    }
+    .logo-light {
+      display: block;
+    }
+}
+
 @import "hamburger";
 @import "breadcrumb";
