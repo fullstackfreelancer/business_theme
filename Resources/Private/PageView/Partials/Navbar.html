@@ -29,7 +29,9 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         <f:for each="{languageMenu}" as="item">
                         <li class="{f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
-                            <a class="dropdown-item" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">{item.navigationTitle}</a>
+                            <a class="dropdown-item" href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                                <core:icon identifier="{item.flag}"/> {item.navigationTitle}
+                            </a>
                         </li>
                         </f:for>
                     </ul>
