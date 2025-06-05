@@ -105,14 +105,14 @@ settings:
     description: 'Leave blank to use website title from template instead'
     category: business_theme.logo
     type: string
-    default: 'EXT:business_theme/Resources/Public/Images/kohlercode-logo-b.svg'
+    default: 'EXT:business_theme/Resources/Public/Images/business-theme.svg'
 
   page.logo.fileInverted:
     label: 'Logo'
     description: 'Leave blank to use website title from template instead'
     category: business_theme.logo
     type: string
-    default: 'EXT:business_theme/Resources/Public/Images/kohlercode-logo-w.svg'
+    default: 'EXT:business_theme/Resources/Public/Images/business-theme-white.svg'
 
   # Theme
   theme.contrast:
