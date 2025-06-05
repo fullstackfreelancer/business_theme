@@ -115,6 +115,14 @@ page {
               as = languageMenu
             }
 
+            50 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            50 {
+                special = rootline
+                special.range = 1|-1
+                includeNotInMenu = 0
+                as = breadcrumbMenu
+            }
+
         }
     }
 }

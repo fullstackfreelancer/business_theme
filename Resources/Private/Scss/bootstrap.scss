@@ -3,6 +3,7 @@
 
 $navbar-padding-y: 1.4rem;
 $navbar-nav-link-padding-x: .6rem;
+$enable-negative-margins: true;
 
 // Required Bootstrap imports
 @import "../../Public/Libs/bootstrap/scss/variables";
@@ -53,3 +54,4 @@ $navbar-nav-link-padding-x: .6rem;
 
 // Custom
 @import "hamburger";
+@import "breadcrumb";
