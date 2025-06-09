@@ -1,0 +1,9 @@
+imports:
+  -
+    resource: 'EXT:business_theme/Fixtures/pages.csv'
+    table: 'pages'
+    mode: insert
+  -
+    resource: 'EXT:business_theme/Fixtures/tt_content.csv'
+    table: 'tt_content'
+    mode: insert
