@@ -1,0 +1,89 @@
+mod.web_layout.BackendLayouts {
+    default {
+        title = Default
+        config {
+            backend_layout {
+                colCount = 2
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Jumbotron
+                                colPos = 1
+                                identifier = jumbotron
+                                slideMode = slide
+                                colspan = 3
+                            }
+                        }
+                    }
+
+                    2 {
+                        columns {
+                            1 {
+                                name = Before Content
+                                colPos = 2
+                                identifier = before
+                                colspan = 3
+                            }
+                        }
+                    }
+
+                    3 {
+                        columns {
+                            1 {
+                                name = Main
+                                colPos = 0
+                                identifier = main
+                                colspan = 3
+                            }
+                        }
+                    }
+
+                    4 {
+                        columns {
+                            1 {
+                                name = After Content
+                                colPos = 3
+                                identifier = after
+                                colspan = 3
+                            }
+                        }
+                    }
+
+
+                    5 {
+                        columns {
+                            1 {
+                                name = Footer 1
+                                colPos = 20
+                                colspan = 1
+                                identifier = footer1
+                                slideMode = slide
+                            }
+                            2 {
+                                name = Footer 2
+                                colPos = 21
+                                colspan = 1
+                                identifier = footer2
+                                slideMode = slide
+                            }
+                            3 {
+                                name = Footer 3
+                                colPos = 22
+                                colspan = 1
+                                identifier = footer3
+                                slideMode = slide
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+mod.web_layout.BackendLayouts.defaultContainer < mod.web_layout.BackendLayouts.default
+mod.web_layout.BackendLayouts.defaultContainer{
+    title = DefaultContainer
+}
